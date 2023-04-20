@@ -1,0 +1,220 @@
+/* DVGA11, Lab2, Kristoffer Tapper & Jonas Schymberg */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html, body, main {
+    height: 100%;
+    margin: 0;
+}
+
+.container-fluid {
+   height: 100%;
+   display: flex;
+}
+
+#tblbox > div:hover {
+    cursor: pointer;
+}
+
+#list {
+    position: absolute;
+    top: 10%;
+    left: 60%;
+    color: white;
+}
+
+#inputPopup {
+    position: absolute;
+    
+    top: 50%;
+    left: 40%;
+    scale: 200%;
+}
+
+.queue-item {
+    border: 1px solid white;
+}
+
+.queue-item:hover {
+    cursor: pointer;
+    /*border: 3px solid white;*/
+    box-shadow: 1px 1px 5px white;
+    /* scale: 110%; */
+}
+
+img {
+    max-width: 95%;
+    max-height: 95%;
+    object-fit: contain;
+    box-shadow: 0px 0px 10px white;
+    border-radius: 10px;
+}
+
+.img-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 100%;
+    overflow: hidden;
+}
+
+.form-wrapper {
+    justify-content: center;
+}
+
+label {
+    font-size: x-large;
+    color: white;
+}
+
+/* styling bord */
+.rt6pl {
+    width: 150px;
+    height: 150px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: white;
+}
+
+.rt4pl {
+    height: 120px;
+    width: 120px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: white;
+}
+
+.t2pl {
+    height: 90px;
+    width: 60px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: white;
+}
+
+.t4pl {
+    width: 80px;
+    height: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: white;
+}
+
+
+/* specifika inställningar för separata bord med nr */
+#tb1 {
+    position: absolute;
+    left: 43%;
+    top: 5%;
+}
+
+#tb2 {
+    position: absolute;
+    left: 43%;
+    top: 20%;
+}
+
+#tb3 {
+    position: absolute;
+    left: 43%;
+    top: 35%;
+}
+
+#tb4 {
+    position: absolute;
+    left: 43%;
+    top: 50%;
+}
+
+#tb5 {
+    position: absolute;
+    left: 43%;
+    top: 65%;
+}
+
+#tb6 {
+    position: absolute;
+    left: 43%;
+    top: 80%;
+}
+
+#tb7 {
+    position: absolute;
+    left: 57%;
+    top: 85%;
+}
+
+#tb8 {
+    position: absolute;
+    left: 65%;
+    top: 85%;
+}
+
+#tb9 {
+    position: absolute;
+    left: 73%;
+    top: 85%;
+}
+
+#tb10 {
+    position: absolute;
+    left: 81%;
+    top: 85%;
+}
+
+#tb11 {
+    position: absolute;
+    left: 61%;
+    top: 70%;
+}
+
+#tb12 {
+    position: absolute;
+    left: 68%;
+    top: 70%;
+}
+
+#tb13 {
+    position: absolute;
+    left: 77%;
+    top: 60%;
+}
+
+#tb14 {
+    position: absolute;
+    left: 93%;
+    top: 63%;
+}
+
+#tb15 {
+    position: absolute;
+    left: 93%;
+    top: 49%;
+}
+
+#tb16 {
+    position: absolute;
+    left: 93%;
+    top: 35%;
+}
+
+
