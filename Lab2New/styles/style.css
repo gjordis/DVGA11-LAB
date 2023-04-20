@@ -18,10 +18,6 @@ html, body, main {
    display: flex;
 }
 
-.queue-item:hover {
-    cursor: pointer;
-}
-
 #list {
     position: absolute;
     top: 10%;
@@ -50,11 +46,13 @@ html, body, main {
     border: 1px solid white;
 }
 
+#tblbox > div:hover {
+    cursor: pointer;
+}
+
 .queue-item:hover {
     cursor: pointer;
-    /*border: 3px solid white;*/
     box-shadow: 1px 1px 5px white;
-    /* scale: 110%; */
 }
 
 img {
