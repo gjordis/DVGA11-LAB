@@ -21,29 +21,30 @@ $('document').ready(function(){ // sidan skall vara redo innan funktionerna kör
             let inputSeats = $('#queue-seats').val(); // variabel som sparar det som matas in i textrutan
             if(!inputText.trim() == '') { // om inputText har något i sig
 
-               if(inputSeats > 0 && inputSeats < 16) { // kolla den som ställer sig i kö boka mer än 0 platser och max 15 platser 
+               if(inputSeats > 0 && inputSeats < 16) { // kolla att den som ställer sig i kö bokar mer än 0 platser och max 15 platser 
                 let newH4 = $('<h4>').text(inputText + ' ' + inputSeats).addClass('queue-item'); // skapar en h4-tagg och lägger in texten som finns i inputText, lägger till klassen queue-item.
 
                 $('#list').append(newH4); // lägger den nya h4an med namnet i listan
 
-                $('#queue-name').val('');  // renstar input fältet
+                $('#queue-name').val(''); // rensar input-fältet
                 $('#queue-seats').val('');  
             }
           }
             }else {
-              confirm(`We are at full capacity!!`); // annars ge en alert med text
-              $('#queue-name').val('');
+              confirm(`We are at full capacity!!`); // När det har blivit fler än 10 namn i listan visas en alert om att det är fullt
+              $('#queue-name').val(''); // rensar input-fältet
               $('#queue-seats').val('');
             }
         });
 
-        $('#list').off('click').on('click', '.queue-item', function(e) { // lyssnare till  kö-listan, fick ta bort lyssnaren först och sedan sätta på en ny, eftersom listan ligger i den div som redan har lyssnare
-            e.stopPropagation(); // förhindrar att det bubblar upp, fick acceptera alerten flera gånger
-            let guest = $(this).text(); 
-            let confirmation = confirm(`Remove guest from queue: ${guest}`)
+        $('#list').off('click').on('click', '.queue-item', function(e) { // lyssnare till  kö-listan, fick ta bort lyssnaren först och sedan sätta på en ny, för att avbryta tidigare lyssnare
+            e.stopPropagation(); // förhindrar att det bubblar upp
+            let guest = $(this).text(); // variabel med texten som trycks på
+            //console.log(guest);
+            let confirmation = confirm(`Remove guest from queue: ${guest}`) // variabel för alert med text + namnet på gästen, gjorde variabeln för att sätt i en if-sats
 
-            if(confirmation){
-                $(this).remove();
+            if(confirmation){ // om användare klickar "ok" på alerten får confirmation värdet true
+                $(this).remove(); // tar bort gästen från listan
             }
     });
     /*
